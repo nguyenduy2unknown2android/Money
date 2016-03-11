@@ -17,6 +17,4 @@ public class Configuration {
 
         return _instance;
     }
-
-
 }
