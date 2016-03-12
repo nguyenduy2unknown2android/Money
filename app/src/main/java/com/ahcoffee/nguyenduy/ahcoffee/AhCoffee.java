@@ -1,5 +1,6 @@
 package com.ahcoffee.nguyenduy.ahcoffee;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,7 @@ import android.view.View;
 import com.firebase.client.Firebase;
 
 public class AhCoffee extends android.app.Application {
+    public static Context Application;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -19,6 +21,7 @@ public class AhCoffee extends android.app.Application {
     }
 
     private void initLib(){
+        Application = getApplicationContext();
         Firebase.setAndroidContext(this);
     }
 }
