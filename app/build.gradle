@@ -25,9 +25,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
     compile 'com.firebase:firebase-client-android:2.5.2+'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.0@aar'
+    //Optional: see how to use the utility.
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.0@aar'
+    //Optional: see how to use the utility.
+    //compile 'com.ogaclejapan.smarttablayout:utils-v13:1.6.0@aar'
 }
