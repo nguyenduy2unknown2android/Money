@@ -24,5 +24,4 @@ public class CoffeeFragment extends Fragment {
       TextView title = (TextView) view.findViewById(R.id.item_title);
       title.setText(String.valueOf(position));
   }
-
 }

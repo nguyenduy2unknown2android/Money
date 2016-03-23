@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 myFirebaseRef.child("article").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
-                        System.out.println(snapshot.getValue());  //prints "Do you have data? You'll love Firebase."
+                        System.out.println(snapshot.getValue());
                     }
 
                     @Override
