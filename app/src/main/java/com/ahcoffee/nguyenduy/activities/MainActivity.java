@@ -1,4 +1,4 @@
-package com.ahcoffee.nguyenduy.ahcoffee;
+package com.ahcoffee.nguyenduy.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 
+import com.ahcoffee.nguyenduy.fragments.CoffeeFragment;
+import com.ahcoffee.nguyenduy.ahcoffee.R;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;

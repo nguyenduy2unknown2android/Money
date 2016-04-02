@@ -1,4 +1,4 @@
-package com.ahcoffee.nguyenduy.ahcoffee;
+package com.ahcoffee.nguyenduy.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ahcoffee.nguyenduy.ahcoffee.R;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 
 public class CoffeeFragment extends Fragment {
