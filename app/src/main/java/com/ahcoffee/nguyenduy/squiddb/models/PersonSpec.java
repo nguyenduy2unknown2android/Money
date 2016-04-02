@@ -1,4 +1,4 @@
-package com.ahcoffee.nguyenduy.db.models;
+package com.ahcoffee.nguyenduy.squiddb.models;
 
 import com.yahoo.squidb.annotations.ColumnSpec;
 import com.yahoo.squidb.annotations.TableModelSpec;

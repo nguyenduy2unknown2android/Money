@@ -2,12 +2,7 @@ package com.ahcoffee.nguyenduy.ahcoffee;
 
 import android.content.Context;
 
-import com.ahcoffee.nguyenduy.activities.MainActivity;
-import com.ahcoffee.nguyenduy.ahcoffee.AhCoffee;
-import com.ahcoffee.nguyenduy.db.AhCoffeeDb;
-import com.ahcoffee.nguyenduy.db.business.PersonBusiness;
-
-import javax.inject.Singleton;
+import com.ahcoffee.nguyenduy.squiddb.AhCoffeeDb;
 
 import dagger.Module;
 

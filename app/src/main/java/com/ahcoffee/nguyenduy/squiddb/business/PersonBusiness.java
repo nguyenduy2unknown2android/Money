@@ -1,6 +1,6 @@
-package com.ahcoffee.nguyenduy.db.business;
+package com.ahcoffee.nguyenduy.squiddb.business;
 
-import com.ahcoffee.nguyenduy.db.AhCoffeeDb;
+import com.ahcoffee.nguyenduy.squiddb.AhCoffeeDb;
 
 import javax.inject.Inject;
 

@@ -5,10 +5,9 @@ import android.content.pm.PackageInfo;
 import android.test.ApplicationTestCase;
 import android.test.MoreAsserts;
 
-import com.ahcoffee.nguyenduy.db.AhCoffeeDb;
-import com.ahcoffee.nguyenduy.db.models.Person;
+import com.ahcoffee.nguyenduy.squiddb.AhCoffeeDb;
+import com.ahcoffee.nguyenduy.squiddb.models.Person;
 import com.yahoo.squidb.data.SquidCursor;
-import com.yahoo.squidb.sql.CompiledStatement;
 import com.yahoo.squidb.sql.Query;
 
 import junit.framework.Assert;

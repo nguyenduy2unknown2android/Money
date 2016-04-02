@@ -1,9 +1,9 @@
-package com.ahcoffee.nguyenduy.db;
+package com.ahcoffee.nguyenduy.squiddb;
 
 import android.content.Context;
 
 import com.ahcoffee.nguyenduy.ahcoffee.AhCoffee;
-import com.ahcoffee.nguyenduy.db.models.Person;
+import com.ahcoffee.nguyenduy.squiddb.models.Person;
 import com.yahoo.squidb.data.SquidDatabase;
 import com.yahoo.squidb.data.adapter.SQLiteDatabaseWrapper;
 import com.yahoo.squidb.sql.Table;
