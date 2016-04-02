@@ -20,7 +20,7 @@ public class AhCoffeeDb extends SquidDatabase {
         super(context);
     }
 
-    public static AhCoffeeDb Instance(){
+    public static AhCoffeeDb getInstance(){
         if (_instance == null)
             _instance = new AhCoffeeDb(AhCoffee.Application);
 
@@ -42,6 +42,10 @@ public class AhCoffeeDb extends SquidDatabase {
 
     @Override
     protected boolean onUpgrade(SQLiteDatabaseWrapper db, int oldVersion, int newVersion) {
+        switch (oldVersion) {
+            case 1:
+                tryCreateTable(Person.TABLE);
+        }
         return false;
     }
 
