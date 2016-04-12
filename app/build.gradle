@@ -40,7 +40,8 @@ dependencies {
     compile 'com.yahoo.squidb:squidb:2.0.2'
     compile 'com.yahoo.squidb:squidb-annotations:2.0.2'
     apt 'com.yahoo.squidb:squidb-processor:2.0.2'
-
     compile 'com.squareup.dagger:dagger:1.2.2'
     apt 'com.squareup.dagger:dagger-compiler:1.2.2'
+    compile files('D:/OpenSource/AhCoffee/AhCoffee/libs/ormlite-android.jar')
+    compile files('D:/OpenSource/AhCoffee/AhCoffee/libs/ormlite-core.jar')
 }

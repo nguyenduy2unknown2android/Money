@@ -6,11 +6,14 @@ import android.test.ApplicationTestCase;
 import android.test.MoreAsserts;
 
 import com.ahcoffee.nguyenduy.squiddb.AhCoffeeDb;
+import com.ahcoffee.nguyenduy.squiddb.business.PersonBusiness;
 import com.ahcoffee.nguyenduy.squiddb.models.Person;
 import com.yahoo.squidb.data.SquidCursor;
 import com.yahoo.squidb.sql.Query;
 
 import junit.framework.Assert;
+
+import javax.inject.Inject;
 
 /**
  * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
@@ -23,7 +26,8 @@ public class ApplicationTest extends ApplicationTestCase<AhCoffee> {
 
     protected void setUp() throws Exception {
         super.setUp();
-        context = getContext();
+        this.context = getContext();
+        AppInjector.init();
     }
 
     public void testCorrectVersion() throws Exception {
@@ -42,6 +46,18 @@ public class ApplicationTest extends ApplicationTestCase<AhCoffee> {
         AhCoffeeDb db = AhCoffeeDb.getInstance();
         Query query = Query.select(Person.PROPERTIES);
         SquidCursor<Person> result = db.query(Person.class, query);
+        Assert.assertNotNull(result);
+    }
+
+    public void testPersonBus() throws Exception{
+        PersonBusiness bus = new PersonBusiness();
+        Assert.assertNotNull(bus.getAllPersons());
+    }
+
+    @Inject AhCoffeeDb ahdb;
+    public void testInjectedDb() throws Exception{
+        Query query = Query.select(Person.PROPERTIES);
+        SquidCursor<Person> result = ahdb.query(Person.class, query);
         Assert.assertNotNull(result);
     }
 }

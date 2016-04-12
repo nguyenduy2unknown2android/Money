@@ -53,6 +53,4 @@ public class AhCoffeeDb extends SquidDatabase {
     protected int getVersion() {
         return VERSION;
     }
-
-    //Todo: Other overridable methods exist for migrations and initialization;
 }

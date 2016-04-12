@@ -5,24 +5,25 @@ import dagger.ObjectGraph;
 /**
  * Created by nguyen duy on 02/04/2016.
  */
-public class AhCoffeeInjector {
-    private static AhCoffeeInjector _instance = null;
+public class AppInjector {
+    private static AppInjector _instance = null;
+
     private ObjectGraph mGraph;
 
-    public static AhCoffeeInjector getInstatnce() {
+    private AppInjector() {
+        mGraph = ObjectGraph.create(new DbModule());
+    }
+
+    public static AppInjector getInstatnce() {
         if (_instance == null) {
             throw new RuntimeException("Must call init(app) first");
         }
         return _instance;
     }
 
-    public static AhCoffeeInjector init(AhCoffee app) {
-        _instance = new AhCoffeeInjector(app);
+    public static AppInjector init() {
+        _instance = new AppInjector();
         return _instance;
-    }
-
-    private AhCoffeeInjector(AhCoffee app) {
-        mGraph = ObjectGraph.create(new DbModule(app));
     }
 
     public void inject(Object object) {
