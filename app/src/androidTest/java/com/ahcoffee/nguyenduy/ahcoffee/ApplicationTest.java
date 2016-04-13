@@ -27,7 +27,6 @@ public class ApplicationTest extends ApplicationTestCase<AhCoffee> {
     protected void setUp() throws Exception {
         super.setUp();
         this.context = getContext();
-        AppInjector.init();
     }
 
     public void testCorrectVersion() throws Exception {
@@ -54,7 +53,7 @@ public class ApplicationTest extends ApplicationTestCase<AhCoffee> {
         Assert.assertNotNull(bus.getAllPersons());
     }
 
-    @Inject AhCoffeeDb ahdb;
+    private AhCoffeeDb ahdb;
     public void testInjectedDb() throws Exception{
         Query query = Query.select(Person.PROPERTIES);
         SquidCursor<Person> result = ahdb.query(Person.class, query);

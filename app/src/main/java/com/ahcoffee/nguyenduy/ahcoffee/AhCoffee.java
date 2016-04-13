@@ -15,6 +15,5 @@ public class AhCoffee extends android.app.Application {
     private void initLib(){
         Application = getApplicationContext();
         Firebase.setAndroidContext(this);
-        AppInjector.init();
     }
 }

@@ -13,7 +13,7 @@ import javax.inject.Inject;
  * Created by nguyenduy on 22/03/2016.
  */
 public class PersonBusiness {
-    @Inject AhCoffeeDb db;
+    private AhCoffeeDb db;
     public PersonBusiness(){
 
     }
